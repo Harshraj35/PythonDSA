@@ -30,5 +30,9 @@ etra_liquids = ["Juice", "Soda", "Tea"]
 full_liquid_mix = base_liquids + etra_liquids
 print(f"Full liquid mix: {full_liquid_mix}")
 
-strong_brew = ["Tea Leaves", "Coffee Grounds"]
+strong_brew = ["Tea Leaves", "Coffee Grounds"] * 3
 print(f"Strong brew : {strong_brew}")
+
+raw_spice_data = bytearray(b"Cardamom, Cloves, Cinnamon")
+raw_spice_data.replace(b"Cardamom", b"Green Cardamom") 
+print(f"Bytes: {raw_spice_data}")
