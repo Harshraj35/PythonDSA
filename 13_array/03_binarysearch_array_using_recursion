@@ -1,0 +1,24 @@
+# Implementation of binary search using recursion method
+# Function defination
+def binarysearch(arr, i, j, x):
+    while i <= j:
+        mid = i + (j - i) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] < x:
+            # Recursion -> calling the same function again with different set of parameters
+            return binarysearch(arr, mid + 1, j, x)
+        else:
+            return binarysearch(arr, i, mid - 1, x)
+    # Searching element is not present in the array    
+    return -1
+
+# Driver code
+# Sorting array
+arr = [2, 5, 10, 14, 18, 22, 27, 35, 40, 59]
+x = 40
+i = 0
+j = len(arr) - 1
+# Function call
+result = binarysearch(arr, i, j, x)
+print("Searching element is present at index", result)
