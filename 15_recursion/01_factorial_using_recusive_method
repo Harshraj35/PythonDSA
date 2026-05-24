@@ -1,0 +1,16 @@
+# Using recursive approach
+# Function defination 
+def findfactorial(n):
+    # Base case condition
+    # Smalll problem
+    if n ==0 or n ==1:
+        return 1
+    else:
+        return n * findfactorial(n - 1)
+    
+
+# Driver code
+n = 5
+# Calling the function
+result = findfactorial(n)
+print("Factorial of", n, "is", result)    

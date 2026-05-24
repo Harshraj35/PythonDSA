@@ -1,0 +1,14 @@
+# Using fibonacci series
+# Function defination
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+    
+
+# Driver code
+n = 5   
+for i in range(n):
+    # Calling the function
+    print(fibonacci(i))
